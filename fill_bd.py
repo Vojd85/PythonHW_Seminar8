@@ -15,11 +15,3 @@ def fill_slov():
         temp['Телефон'] = [x]
         slov[i] = temp
 fill_slov()
-
-
-def save():
-# сохранить в json
-    with open('BD.json', 'w', encoding='utf-8') as fh: # открываем файл на запись
-        fh.write(json.dumps(slov,
-                            ensure_ascii=False)) # преобразовываем словарь data в unicode-строку и записываем в файл
-    print('БД успешно сохранена')
